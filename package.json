@@ -47,7 +47,7 @@
     "git:hooks": "cp -rf scripts/git-pre-commit .git/hooks/pre-commit",
     "git:precommit": "scripts/git-pre-commit",
     "npm:install:clean": "rm -rf node_modules yarn.lock && yarn",
-    "npm:update": "ncu -a && yarn deps:install:clean",
+    "npm:update": "ncu -a && yarn npm:install:clean",
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn security && yarn build --noEmit && yarn test",
     "ci": "yarn && yarn lint:checkstyle && yarn security:checkstyle && yarn build --noEmit && yarn cover:xunit",
