@@ -51,7 +51,8 @@
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn security && yarn build --noEmit && yarn test --reporter dot",
     "ci": "yarn && yarn lint:checkstyle && yarn security:checkstyle && yarn build --noEmit && yarn cover:xunit",
-    "release": "scripts/git-release"
+    "release": "scripts/git-release",
+    "release:major": "scripts/git-major-release"
   },
   "nyc": {
     "include": [
