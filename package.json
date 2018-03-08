@@ -22,7 +22,7 @@
     "chai": "^4.1.2",
     "conventional-changelog-cli": "^1.3.16",
     "conventional-recommended-bump": "^2.0.6",
-    "mocha": "^5.0.1",
+    "mocha": "^5.0.4",
     "npm-check-updates": "^2.14.1",
     "nsp": "^3.2.1",
     "nsp-reporter-checkstyle": "^1.1.0",
