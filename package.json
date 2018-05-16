@@ -21,14 +21,14 @@
     "@types/mocha": "^5.2.0",
     "chai": "^4.1.2",
     "mocha": "^5.1.1",
-    "npm-check-updates": "^2.14.1",
+    "npm-check-updates": "^2.14.2",
     "nsp": "^3.2.1",
     "nsp-reporter-checkstyle": "^1.1.0",
-    "nyc": "^11.7.1",
+    "nyc": "^11.8.0",
     "prettier": "^1.12.1",
     "standard-version": "^4.3.0",
-    "ts-node": "^6.0.0",
-    "tslint": "^5.9.1",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.3"
   },
   "scripts": {
