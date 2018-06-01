@@ -9,6 +9,7 @@
     "linebreak-style": [true, "LF"],
     "max-classes-per-file": [true, 1],
     "max-line-length": [true, 140],
+    "member-access": [true, "no-public"],
     "no-duplicate-variable": true,
     "prefer-const": [true, { "destructuring": "all" }],
     "quotemark": [true, "single", "avoid-escape"],
