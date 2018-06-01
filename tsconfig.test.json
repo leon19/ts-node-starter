@@ -1,8 +1,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
     "outDir": "./build/tests",
     "rootDir": ".",
+    "noEmit": true,
     "types": [
       "node",
       "mocha"
