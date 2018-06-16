@@ -3,6 +3,7 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
+    "arrow-parens": [true, "ban-single-arg-parens"],
     "encoding": true,
     "indent": [true, "spaces", 2],
     "interface-name": [true, "never-prefix"],
@@ -14,7 +15,7 @@
     "prefer-const": [true, { "destructuring": "all" }],
     "quotemark": [true, "single", "avoid-escape"],
     "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
-    "variable-name": [true, "ban-keywords", "check-format"]
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
   },
   "rulesDirectory": []
 }
