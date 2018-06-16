@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Start pack for TypeScript under NodeJS",
   "main": "build/index.js",
-  "types": "types/index.d.ts",
+  "types": "build/index.d.ts",
   "license": "MIT",
   "author": {
     "name": "Lorens León",
@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf build reports types",
+    "clean": "rm -rf build reports",
     "test": "mocha --require tests/entry 'tests/**/*.{test,spec}.ts'",
     "test:xunit": "yarn test --reporter xunit --reporter-options output=reports/test-results.xml || exit 0",
     "cover": "nyc yarn test",
@@ -64,7 +64,6 @@
       "**/*.d.ts",
       "build/**",
       "tests/**",
-      "types/**",
       "node_modules/**"
     ],
     "reporter": [

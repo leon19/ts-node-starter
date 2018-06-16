@@ -8,7 +8,7 @@
 
 ### yarn build
 
-Compile typescript files from the `src` folder inside the `build` folder. TypeScript definitions are generated inside the `types` folder.
+Compile typescript files from the `src` folder inside the `build` folder.
 
 ### yarn clean
 
@@ -16,7 +16,6 @@ Remove the following directories/files
 
 * **build**
 * **reports**
-* **types**
 
 ### yarn test
 
