@@ -6,6 +6,10 @@
 
 ## Usage
 
+The project use [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) for linting and fixing possible errors on source code before commit
+
+Git hooks scripts are installed after running `yarn install` the first time
+
 ### yarn build
 
 Compile typescript files from the `src` folder inside the `build` folder.
@@ -14,15 +18,15 @@ Compile typescript files from the `src` folder inside the `build` folder.
 
 Remove the following directories/files
 
-* **build**
-* **reports**
+- **build**
+- **reports**
 
 ### yarn test
 
 Run tests files inside the `tests` folder that matches the following patterns. Exit with code > 0 on error
 
-* **\*.test.ts**
-* **\*.spec.ts**
+- **\*.test.ts**
+- **\*.spec.ts**
 
 ### yarn test:xunit
 
@@ -56,14 +60,6 @@ Check dependencies vulnerabilities
 
 The same as `yarn security` and generates a checkstyle report in `reports/security-checkstyle.xml`
 
-### yarn git:hooks
-
-Copy git hook script in the `.git/hooks` folder
-
-### yarn git:precommit
-
-Execute the git `pre-commit` hook
-
 ### yarn npm:install:clean
 
 Removed `node_modules` and `yarn.lock` files and reinstall the dependencies
@@ -82,30 +78,30 @@ The package is generated using the `src` folder as the package root. The `main` 
 
 Check for:
 
-* Build errors
-* Tests failures
-* Lint errors
-* Dependencies vulnerabilities
+- Build errors
+- Tests failures
+- Lint errors
+- Dependencies vulnerabilities
 
 ### yarn ci
 
 Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It generates a report file instead
 
-* **reports/lint-checkstyle.xml** Lint report in chackstyle format
-* **reports/security-checkstyle.xml** Vulnerabilities report in checkstyle format 
-* **reports/test-results.xml** Test report in xUnit format
-* **reports/coverage/clover.xml** Coverage report in clover format
-* **reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
-* **reports/coverage/lcov.info** Coverage report in lcov
-* **reports/coverage/index.html** Coverage report in html
+- **reports/lint-checkstyle.xml** Lint report in chackstyle format
+- **reports/security-checkstyle.xml** Vulnerabilities report in checkstyle format
+- **reports/test-results.xml** Test report in xUnit format
+- **reports/coverage/clover.xml** Coverage report in clover format
+- **reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
+- **reports/coverage/lcov.info** Coverage report in lcov
+- **reports/coverage/index.html** Coverage report in html
 
 ### yarn release
 
-* Bump `package.json` version accordingly to the commit messages
-* Generate changelog for the new version from the commit messages
-* Commit `package.json` and `CHANGELOG.md` with the new changes
-* Create a git tag with the new version
-* You'll need to execute `git push --follow-tags origin master` after generating a release
+- Bump `package.json` version accordingly to the commit messages
+- Generate changelog for the new version from the commit messages
+- Commit `package.json` and `CHANGELOG.md` with the new changes
+- Create a git tag with the new version
+- You'll need to execute `git push --follow-tags origin master` after generating a release
 
 ### yarn release:major
 

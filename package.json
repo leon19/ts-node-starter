@@ -20,6 +20,8 @@
     "@types/chai": "^4.1.4",
     "@types/mocha": "^5.2.5",
     "chai": "^4.1.2",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "mocha": "^5.2.0",
     "npm-check-updates": "^2.14.2",
     "nsp": "^3.2.1",
@@ -38,13 +40,11 @@
     "test:xunit": "yarn test --reporter xunit --reporter-options output=reports/test-results.xml || exit 0",
     "cover": "nyc yarn test",
     "cover:xunit": "nyc yarn test:xunit",
-    "lint": "tslint '{src,tests}/**/*.ts'",
+    "lint": "tslint '{src,tests}/**/*.{js,ts}'",
     "lint:checkstyle": "mkdir -p reports && yarn lint --format checkstyle --out reports/lint-checkstyle.xml --force",
-    "lint:format": "prettier --write '{src,tests}/**/*.ts' && yarn lint --fix",
+    "lint:format": "prettier --write '{src,tests}/**/*.{js,ts}' && yarn lint --fix",
     "security": "nsp check",
     "security:checkstyle": "mkdir -p reports && yarn --silent security --warn-only --reporter checkstyle > reports/security-checkstyle.xml",
-    "git:hooks": "cp -rf scripts/git-pre-commit .git/hooks/pre-commit",
-    "git:precommit": "scripts/git-pre-commit",
     "npm:install:clean": "rm -rf node_modules yarn.lock && yarn",
     "npm:update": "ncu -a && yarn npm:install:clean",
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
@@ -52,6 +52,29 @@
     "ci": "yarn && yarn lint:checkstyle && yarn security:checkstyle && yarn build --noEmit && yarn cover:xunit",
     "release": "standard-version",
     "release:major": "yarn release --release-as major"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "{src,test}/**/*.{js,ts}": [
+        "npx tslint --fix",
+        "npx prettier --write",
+        "git add"
+      ],
+      "*.{md,json}": [
+        "npx prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "package.json",
+      "tsconfig.json"
+    ]
   },
   "nyc": {
     "include": [
