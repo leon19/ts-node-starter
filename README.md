@@ -84,7 +84,3 @@ Run test and generate every possible report. Do not exit with error code > 0 if 
 - Commit `package.json` and `CHANGELOG.md` with the new changes
 - Create a git tag with the new version
 - You'll need to execute `git push --follow-tags origin master` after generating a release
-
-### yarn release:major
-
-Same as `yarn release` but it force a major version bump

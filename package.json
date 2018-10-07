@@ -43,8 +43,7 @@
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn build --noEmit && yarn test --reporter dot",
     "ci": "yarn && yarn lint:checkstyle && && yarn build --noEmit && yarn cover:xunit",
-    "release": "standard-version",
-    "release:major": "yarn release --release-as major"
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
