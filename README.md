@@ -60,14 +60,6 @@ Check dependencies vulnerabilities
 
 The same as `yarn security` and generates a checkstyle report in `reports/security-checkstyle.xml`
 
-### yarn npm:install:clean
-
-Removed `node_modules` and `yarn.lock` files and reinstall the dependencies
-
-### yarn npm:update
-
-Update the dependencies to its latest versions and install them
-
 ### yarn npm:package
 
 Generate a tarball containing the npm package. It can be published via `npm publish`.
