@@ -52,14 +52,6 @@ The same as `yarn lint` and generates a checkstyle report in `reports/lint-check
 
 Run `yarn lint` applying fixes and run prettier on every typescript file
 
-### yarn security
-
-Check dependencies vulnerabilities
-
-### yarn security:checkstyle
-
-The same as `yarn security` and generates a checkstyle report in `reports/security-checkstyle.xml`
-
 ### yarn npm:package
 
 Generate a tarball containing the npm package. It can be published via `npm publish`.
@@ -73,14 +65,12 @@ Check for:
 - Build errors
 - Tests failures
 - Lint errors
-- Dependencies vulnerabilities
 
 ### yarn ci
 
 Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It generates a report file instead
 
 - **reports/lint-checkstyle.xml** Lint report in chackstyle format
-- **reports/security-checkstyle.xml** Vulnerabilities report in checkstyle format
 - **reports/test-results.xml** Test report in xUnit format
 - **reports/coverage/clover.xml** Coverage report in clover format
 - **reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
