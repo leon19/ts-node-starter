@@ -36,7 +36,7 @@
     "test": "mocha --require tests/entry 'tests/**/*.{test,spec}.ts'",
     "cover": "nyc yarn test",
     "lint": "tslint '{src,tests}/**/*.{js,ts}'",
-    "lint:format": "prettier --write '{src,tests}/**/*.{js,ts}' && yarn lint --fix",
+    "lint:fix": "prettier --write '{src,tests}/**/*.{js,ts}' && yarn lint --fix",
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn build --noEmit && yarn test --reporter dot",
     "ci": "yarn && yarn lint && yarn build --noEmit && yarn test",

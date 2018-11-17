@@ -36,7 +36,7 @@ The same as as `yarn test` and generates coverages reports in `reports/coverage`
 
 Check tslint errors according to `tslint.json`
 
-### yarn lint:format
+### yarn lint:fix
 
 Run `yarn lint` applying fixes and run prettier on every typescript file
 
