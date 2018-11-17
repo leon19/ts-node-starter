@@ -82,6 +82,8 @@
     "exclude": [
       "**/*.d.ts",
       "lib/**",
+      "esm/**",
+      "lib/**/*.test.ts",
       "tests/**",
       "node_modules/**"
     ],
