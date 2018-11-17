@@ -17,18 +17,18 @@
     "@types/node": "*"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.6",
+    "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "husky": "^1.1.1",
-    "lint-staged": "^7.3.0",
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.5",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
-    "prettier": "^1.14.3",
+    "nyc": "^13.1.0",
+    "prettier": "^1.15.2",
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.1.1"
+    "typescript": "^3.1.6"
   },
   "scripts": {
     "build": "tsc",
