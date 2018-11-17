@@ -34,15 +34,12 @@
     "build": "tsc",
     "clean": "rm -rf build reports",
     "test": "mocha --require tests/entry 'tests/**/*.{test,spec}.ts'",
-    "test:xunit": "yarn test --reporter xunit --reporter-options output=reports/test-results.xml || exit 0",
     "cover": "nyc yarn test",
-    "cover:xunit": "nyc yarn test:xunit",
     "lint": "tslint '{src,tests}/**/*.{js,ts}'",
-    "lint:checkstyle": "mkdir -p reports && yarn lint --format checkstyle --out reports/lint-checkstyle.xml --force",
     "lint:format": "prettier --write '{src,tests}/**/*.{js,ts}' && yarn lint --fix",
     "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn build --noEmit && yarn test --reporter dot",
-    "ci": "yarn && yarn lint:checkstyle && && yarn build --noEmit && yarn cover:xunit",
+    "ci": "yarn && yarn lint && yarn build --noEmit && yarn test",
     "release": "standard-version"
   },
   "husky": {

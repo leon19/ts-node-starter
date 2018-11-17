@@ -28,25 +28,13 @@ Run tests files inside the `tests` folder that matches the following patterns. E
 - **\*.test.ts**
 - **\*.spec.ts**
 
-### yarn test:xunit
-
-The same as `yarn test` and generates an `xunit` report in `reports/test-results.xml`. Always exit with 0 code
-
 ### yarn cover
 
 The same as as `yarn test` and generates coverages reports in `reports/coverage`. Exit with code > 0 on error
 
-### yarn cover:xunit
-
-The same as `yarn test:xunit` and `yarn cover` combined. Exit with code 0 always
-
 ### yarn lint
 
 Check tslint errors according to `tslint.json`
-
-### yarn lint:checkstyle
-
-The same as `yarn lint` and generates a checkstyle report in `reports/lint-checkstyle.xml`
 
 ### yarn lint:format
 
