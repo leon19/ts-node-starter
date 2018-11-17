@@ -51,12 +51,12 @@
   "lint-staged": {
     "linters": {
       "{src,test}/**/*.{js,ts}": [
-        "npx tslint --fix",
-        "npx prettier --write",
+        "tslint --fix",
+        "prettier --write",
         "git add"
       ],
       "*.{md,json}": [
-        "npx prettier --write",
+        "prettier --write",
         "git add"
       ]
     },
