@@ -1,4 +1,5 @@
-/build/
+/lib/
+/esm/
 /node_modules/
 /reports/
 *.log

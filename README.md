@@ -12,13 +12,18 @@ Git hooks scripts are installed after running `yarn install` the first time
 
 ### yarn build
 
-Compile typescript files from the `src` folder inside the `build` folder.
+Compile typescript files from the `src` folder inside the `lib` folder
+
+### yarn build:esm
+
+Compile typescript files from the `src` folder inside the `esm` folder
 
 ### yarn clean
 
 Remove the following directories/files
 
-- **build**
+- **lib**
+- **esm**
 - **reports**
 
 ### yarn test

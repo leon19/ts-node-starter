@@ -2,13 +2,18 @@
   "name": "ts-node-starter",
   "version": "0.0.0",
   "description": "Start pack for TypeScript under NodeJS",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "index.js",
+  "module": "esm",
+  "types": "lib/index.d.ts",
   "license": "MIT",
   "author": {
     "name": "Lorens León",
     "email": "lorensleon@gmail.com"
   },
+  "files": [
+    "src",
+    "esm"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/leon19/ts-node-starter"
@@ -20,6 +25,7 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
+    "concurrently": "^4.0.1",
     "husky": "^1.1.4",
     "lint-staged": "^8.0.5",
     "mocha": "^5.2.0",
@@ -32,14 +38,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf build reports",
+    "build:esm": "tsc --module es2015 --outDir esm",
+    "clean": "rm -rf lib esm reports",
     "test": "mocha --require tests/entry 'tests/**/*.{test,spec}.ts'",
     "cover": "nyc yarn test",
     "lint": "tslint '{src,tests}/**/*.{js,ts}'",
     "lint:fix": "prettier --write '{src,tests}/**/*.{js,ts}' && yarn lint --fix",
-    "npm:package": "scripts/npm-build && npm pack build && rm -rf build",
     "health": "yarn && yarn clean && yarn lint && yarn build --noEmit && yarn test --reporter dot",
     "ci": "yarn && yarn lint && yarn build --noEmit && yarn test",
+    "prepublishOnly": "yarn clean && concurrently 'yarn build' 'yarn build:esm'",
     "release": "standard-version"
   },
   "husky": {
@@ -74,7 +81,7 @@
     ],
     "exclude": [
       "**/*.d.ts",
-      "build/**",
+      "lib/**",
       "tests/**",
       "node_modules/**"
     ],
