@@ -45,12 +45,6 @@ Check tslint errors according to `tslint.json`
 
 Run `yarn lint` applying fixes and run prettier on every typescript file
 
-### yarn npm:package
-
-Generate a tarball containing the npm package. It can be published via `npm publish`.
-
-The package is generated using the `src` folder as the package root. The `main` entry in the `package.json` is updated accordingly.
-
 ### yarn health
 
 Check for:
