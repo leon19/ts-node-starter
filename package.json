@@ -25,16 +25,16 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "concurrently": "^4.0.1",
-    "husky": "^1.1.4",
-    "lint-staged": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
-    "prettier": "^1.15.2",
+    "prettier": "^1.15.3",
     "standard-version": "^4.4.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.2"
   },
   "scripts": {
     "build": "tsc",
@@ -97,8 +97,8 @@
       "text-summary"
     ],
     "clean": true,
-    "tempDirectory": "reports/.nyc_ouptut",
-    "reportDir": "reports/coverage",
+    "temp-dir": "reports/.nyc_ouptut",
+    "report-dir": "reports/coverage",
     "all": true
   },
   "prettier": {
