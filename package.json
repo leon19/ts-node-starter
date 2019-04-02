@@ -59,8 +59,8 @@
   "lint-staged": {
     "linters": {
       "{src,test}/**/*.{js,ts}": [
-        "tslint --fix",
         "prettier --write",
+        "tslint --fix",
         "git add"
       ],
       "*.{md,json}": [
