@@ -39,7 +39,7 @@ The same as as `yarn test` and generates coverages reports in `reports/coverage`
 
 ### yarn lint
 
-Check tslint errors according to `tslint.json`
+Check eslint errors according to `.eslintrc`
 
 ### yarn lint:fix
 
