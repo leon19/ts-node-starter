@@ -6,10 +6,7 @@
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
-  "author": {
-    "name": "Lorens León",
-    "email": "lorensleon@gmail.com"
-  },
+  "author": "Lorens León <lorensleon@gmail.com>",
   "files": [
     "src",
     "esm",
@@ -53,56 +50,5 @@
     "ci": "yarn && yarn lint && yarn build --noEmit && yarn test",
     "prepublishOnly": "yarn clean && concurrently 'yarn build' 'yarn build:esm'",
     "release": "standard-version"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-commit": "git update-index --again"
-    }
-  },
-  "lint-staged": {
-    "linters": {
-      "{src,test}/**/*.{js,ts}": [
-        "eslint --fix",
-        "git add"
-      ],
-      "*.{md,json}": [
-        "prettier --write",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "package.json",
-      "tsconfig.json"
-    ]
-  },
-  "nyc": {
-    "include": [
-      "src/**/*.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "exclude": [
-      "**/*.d.ts",
-      "lib/**",
-      "esm/**",
-      "lib/**/*.test.ts",
-      "tests/**",
-      "node_modules/**"
-    ],
-    "reporter": [
-      "clover",
-      "cobertura",
-      "html",
-      "json",
-      "lcov",
-      "text",
-      "text-summary"
-    ],
-    "clean": true,
-    "temp-dir": "reports/.nyc_ouptut",
-    "report-dir": "reports/coverage",
-    "all": true
   }
 }
