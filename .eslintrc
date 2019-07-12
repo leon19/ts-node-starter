@@ -26,6 +26,7 @@
     "max-len": ["error", 140],
     "no-duplicate-imports": "error",
     "no-unused-expressions": "error",
+    "no-dupe-class-members": "off", // typescript signature overload
     "no-undef": "off", // typescript already check this
     "no-var": "error",
     "prefer-const": [
@@ -53,9 +54,10 @@
     // typescript
     "@typescript-eslint/array-type": ["error", "array-simple"],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-member-accessibility": [{ "accessibility": "no-public" }],
+    "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "no-public" }],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/no-use-before-define": "off"
   }
 }
