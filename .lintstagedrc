@@ -1,16 +1,10 @@
 {
-  "linters": {
-    "{src,test}/**/*.{js,ts}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{md,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "ignore": [
-    "package.json",
-    "tsconfig.json"
+  "{src,test}/**/*.{js,ts}": [
+    "eslint --fix",
+    "git add"
+  ],
+  "*.{md,json}": [
+    "prettier --write",
+    "git add"
   ]
 }
