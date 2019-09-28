@@ -1,22 +1,24 @@
 # TypeScript NodeJS Starter Pack
 
-> Make sure you have `yarn` installed.
->
-> https://yarnpkg.com/lang/en/docs/install/
+## Development
 
-## Usage
+The project use [husky](https://github.com/typicode/husky) and
+[lint-staged](https://github.com/okonet/lint-staged) for linting and fixing possible errors on
+source code before commit
 
-The project use [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) for linting and fixing possible errors on source code before commit
+Git hooks scripts are installed after running `yarn` the first time
 
-Git hooks scripts are installed after running `yarn install` the first time
-
-### yarn build
+### yarn build:commonjs
 
 Compile typescript files from the `src` folder inside the `lib` folder
 
 ### yarn build:esm
 
-Compile typescript files from the `src` folder inside the `esm` folder
+Compile typescript files from the `src` folder inside the `esm` folder using es modules
+
+### yarn build
+
+Concurrently run both `build:commonjs` and `build:esm`
 
 ### yarn clean
 
@@ -28,14 +30,16 @@ Remove the following directories/files
 
 ### yarn test
 
-Run tests files inside the `tests` folder that matches the following patterns. Exit with code > 0 on error
+Run tests files inside the `tests` folder that matches the following patterns. Exit with code > 0 on
+error
 
 - **\*.test.ts**
 - **\*.spec.ts**
 
 ### yarn cover
 
-The same as as `yarn test` and generates coverages reports in `reports/coverage`. Exit with code > 0 on error
+The same as as `yarn test` and generates coverages reports in `reports/coverage`. Exit with code > 0
+on error
 
 ### yarn lint
 
@@ -55,7 +59,8 @@ Check for:
 
 ### yarn ci
 
-Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It generates a report file instead
+Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It
+generates a report file instead
 
 - **reports/lint-checkstyle.xml** Lint report in chackstyle format
 - **reports/test-results.xml** Test report in xUnit format
