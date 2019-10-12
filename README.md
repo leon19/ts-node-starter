@@ -36,7 +36,7 @@ error
 - **\*.test.ts**
 - **\*.spec.ts**
 
-### yarn cover
+### npm run cover (for some reason it does not work with yarn)
 
 The same as as `yarn test` and generates coverages reports in `reports/coverage`. Exit with code > 0
 on error
