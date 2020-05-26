@@ -23,7 +23,8 @@
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "max-classes-per-file": ["error", 1],
-    "max-len": ["error", 140],
+    "no-console": "error",
+    "no-shadow": "warn",
     "no-duplicate-imports": "error",
     "no-unused-expressions": "error", // disable for chai assertions
     "no-dupe-class-members": "off", // typescript signature overload
@@ -52,6 +53,8 @@
     "quote-props": ["error", "as-needed"],
 
     // typescript
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "no-public" }],
