@@ -39,17 +39,17 @@
     "typescript": "~4.1.5"
   },
   "scripts": {
-    "build": "concurrently 'yarn:build:*'",
+    "build": "concurrently 'npm:build:*'",
     "build:commonjs": "tsc",
     "build:esm": "tsc --module es2020 --outDir esm",
     "clean": "rm -rf lib esm reports tsconfig.tsbuildinfo",
     "test": "mocha --require tests/entry 'tests/**/*.{test,spec}.ts'",
-    "cover": "nyc yarn test",
+    "cover": "nyc npm test",
     "lint": "eslint '{src,tests}/**/*.{js,ts}'",
-    "lint:fix": "yarn lint --fix",
-    "health": "yarn && yarn clean && yarn lint && yarn build --noEmit && yarn test --reporter dot",
-    "ci": "yarn && yarn lint && yarn build --noEmit && yarn test",
-    "prepublishOnly": "yarn clean && yarn build",
+    "lint:fix": "npm run lint -- --fix",
+    "health": "npm install && npm run clean && npm run lint && npm run build:commonjs -- --noEmit && npm test -- --reporter dot",
+    "ci": "npm ci && npm run lint && npm run build --noEmit && npm test",
+    "prepublishOnly": "npm run clean && npm run build",
     "release": "standard-version"
   }
 }
