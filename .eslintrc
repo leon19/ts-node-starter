@@ -57,7 +57,15 @@
     "quote-props": ["error", "as-needed"],
 
     // Import order plugin
-    "import/order": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
 
     // typescript
     "@typescript-eslint/ban-ts-comment": "off",
