@@ -1,5 +1,5 @@
 {
-  "{src,test}/**/*.{js,ts}": [
+  "{src,tests}/**/*.{js,ts}": [
     "eslint --fix",
     "git add"
   ],
