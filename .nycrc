@@ -25,5 +25,8 @@
   "clean": true,
   "temp-dir": "reports/.nyc_ouptut",
   "report-dir": "reports/coverage",
-  "all": true
+  "all": true,
+  "require" : [
+    "ts-node/register/transpile-only"
+  ]
 }

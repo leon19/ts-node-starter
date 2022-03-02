@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "noEmit": true,
+    "tsBuildInfoFile": "./tests/.tsbuildinfo",
     "types": ["node", "mocha"]
   },
   "include": ["src", "tests"]
