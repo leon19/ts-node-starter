@@ -1,7 +1,6 @@
 /lib/
 /esm/
 /node_modules/
-/reports/
+/.tmp
 *.log
 /*.tgz
-*.tsbuildinfo

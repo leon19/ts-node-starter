@@ -26,7 +26,7 @@ Remove the following directories/files
 
 - **lib**
 - **esm**
-- **reports**
+- **.tmp**
 
 ### npm test
 
@@ -38,36 +38,23 @@ error
 
 ### npm run cover
 
-The same as as `npm test` and generates coverages reports in `reports/coverage`. Exit with code > 0
-on error
+The same as `npm test` and generates coverages reports in `.tmp/reports/coverage`. Exit with code >
+0 on error
 
 ### npm run lint
 
-Check eslint errors according to `.eslintrc`
-
-### npm run lint:fix
-
-Run `npm run lint` applying fixes and run prettier on every typescript file
-
-### npm run health
-
-Check for:
-
-- Build errors
-- Tests failures
-- Lint errors
+Check eslint errors according to `.eslintrc` and `.pretterrc` applying fixes and run prettier on
+every typescript file
 
 ### npm run ci
 
 Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It
 generates a report file instead
 
-- **reports/lint-checkstyle.xml** Lint report in chackstyle format
-- **reports/test-results.xml** Test report in xUnit format
-- **reports/coverage/clover.xml** Coverage report in clover format
-- **reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
-- **reports/coverage/lcov.info** Coverage report in lcov
-- **reports/coverage/index.html** Coverage report in html
+- **.tmp/reports/coverage/clover.xml** Coverage report in clover format
+- **.tmp/reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
+- **.tmp/reports/coverage/lcov.info** Coverage report in lcov
+- **.tmp/reports/coverage/index.html** Coverage report in html
 
 ### npm run release
 
