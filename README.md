@@ -57,4 +57,4 @@ generates a report file instead
 - Generate changelog for the new version from the commit messages
 - Commit `package.json` and `CHANGELOG.md` with the new changes
 - Create a git tag with the new version
-- You'll need to execute `git push --follow-tags origin master` after generating a release
+- You'll need to execute `git push --follow-tags origin main` after generating a release
