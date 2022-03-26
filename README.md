@@ -41,16 +41,6 @@ The same as `npm test` and generates coverages reports in `.tmp/reports/coverage
 Check eslint errors according to `.eslintrc` and `.pretterrc` applying fixes and run prettier on
 every typescript file
 
-### npm run ci
-
-Run test and generate every possible report. Do not exit with error code > 0 if the tests fail. It
-generates a report file instead
-
-- **.tmp/reports/coverage/clover.xml** Coverage report in clover format
-- **.tmp/reports/coverage/cobertura-coverage.xml** Coverage report in cobertura format
-- **.tmp/reports/coverage/lcov.info** Coverage report in lcov
-- **.tmp/reports/coverage/index.html** Coverage report in html
-
 ### npm run release
 
 - Bump `package.json` version accordingly to the commit messages
