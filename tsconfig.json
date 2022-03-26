@@ -109,8 +109,7 @@
   ],
   "exclude": [
     "node_modules",
-    "lib",
-    "esm"
+    "dist"
   ],
   "ts-node": {
     "transpileOnly": true

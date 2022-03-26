@@ -2,15 +2,13 @@
   "name": "ts-node-starter",
   "version": "0.0.0",
   "description": "Start pack for TypeScript under NodeJS",
-  "main": "lib/index.js",
-  "module": "esm/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/commonjs/index.js",
+  "types": "dist/commonjs/index.d.ts",
   "license": "MIT",
   "author": "Lorens León <lorensleon@gmail.com>",
   "files": [
     "src",
-    "esm",
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -26,7 +24,6 @@
     "@typescript-eslint/parser": "^5.16.0",
     "c8": "^7.11.0",
     "chai": "^4.3.6",
-    "concurrently": "^7.0.0",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
@@ -40,15 +37,14 @@
     "typescript": "~4.6.2"
   },
   "scripts": {
-    "build": "concurrently 'npm:build:*'",
-    "build:commonjs": "tsc --project tsconfig.build.json ",
-    "build:esm": "tsc --project tsconfig.build.json --module es2022 --outDir esm",
-    "clean": "rm -rf lib esm .tmp",
+    "build": "tsc",
+    "build:commonjs": "tsc --project tsconfig.commonjs.json",
+    "clean": "rm -rf .tmp dist",
     "test": "mocha --require tests/entry.js 'tests/**/*.{test,spec}.ts'",
     "cover": "c8 npm test",
     "lint": "eslint --fix '{src,tests}/**/*.{js,ts}' && prettier --write '.{c8rc,eslintrc,lintstagedrc,prettierrc}' '*.{md,json}'",
-    "ci": "npm ci && npm run lint && npm run build --noEmit && npm test",
-    "prepublishOnly": "npm run clean && npm run build",
+    "ci": "npm ci && npm run lint && npm run build && npm test",
+    "prepublishOnly": "npm run clean && npm run build:commonjs",
     "release": "standard-version",
     "prepare": "husky install || exit 0"
   }

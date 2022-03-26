@@ -8,25 +8,20 @@ source code before commit
 
 Git hooks scripts are installed after running `npm install` the first time
 
-### npm run build:commonjs
-
-Compile typescript files from the `src` folder inside the `lib` folder
-
-### npm run build:esm
-
-Compile typescript files from the `src` folder inside the `esm` folder using es modules
-
 ### npm run build
 
-Concurrently run both `build:commonjs` and `build:esm`
+Compile typescript files from the `src` and `tests` folder without emitting the sources
+
+### npm run build:commonjs
+
+Compile typescript files from the `src` folder inside the `dist/commonjs` folder
 
 ### npm run clean
 
 Remove the following directories/files
 
-- **lib**
-- **esm**
 - **.tmp**
+- **dist**
 
 ### npm test
 

@@ -1,6 +1,5 @@
-/lib/
-/esm/
-/node_modules/
 /.tmp
+/dist/
+/node_modules/
 *.log
 /*.tgz
