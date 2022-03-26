@@ -57,13 +57,17 @@
     "quote-props": ["error", "as-needed"],
 
     // Import order plugin
+    "import/first": ["error"],
+    "import/newline-after-import": ["error"],
+    "import/no-extraneous-dependencies": ["error"],
     "import/order": [
       "error",
       {
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
-        }
+        },
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
       }
     ],
 
