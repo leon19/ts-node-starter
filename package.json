@@ -1,6 +1,6 @@
 {
   "name": "ts-node-starter",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Start pack for TypeScript under NodeJS",
   "main": "dist/commonjs/index.js",
   "types": "dist/commonjs/index.d.ts",
@@ -34,6 +34,7 @@
     "lint-staged": "^12.3.7",
     "mocha": "^9.2.2",
     "prettier": "^2.6.0",
+    "semantic-release": "^19.0.2",
     "standard-version": "^9.3.2",
     "ts-node": "^10.7.0",
     "typescript": "~4.6.2"
@@ -48,5 +49,10 @@
     "prepublishOnly": "npm run clean && npm run build:commonjs",
     "release": "standard-version",
     "prepare": "husky install || exit 0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
