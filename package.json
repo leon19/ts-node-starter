@@ -45,7 +45,7 @@
     "clean": "rm -rf .tmp dist",
     "test": "mocha --require tests/entry.js 'tests/**/*.{test,spec}.ts'",
     "cover": "c8 npm test",
-    "lint": "eslint --fix '{src,tests}/**/*.ts' && prettier --write '*.{md,json}'",
+    "lint": "eslint --fix '{src,tests}/**/*.{js,ts}' && prettier --write '*.{md,json}'",
     "prepublishOnly": "npm run clean && npm run build:commonjs",
     "release": "standard-version",
     "prepare": "husky install || exit 0"

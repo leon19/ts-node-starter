@@ -30,7 +30,6 @@
     "no-console": "error",
     "no-shadow": "warn",
     "no-duplicate-imports": "error",
-    "no-unused-expressions": "error", // disable for chai assertions
     "no-dupe-class-members": "off", // typescript signature overload
     "no-undef": "off", // typescript already check this
     "no-var": "error",
@@ -81,5 +80,13 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-parameter-properties": "off",
     "@typescript-eslint/no-use-before-define": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*.test.ts"],
+      "rules": {
+        "no-unused-expressions": "error" // disabled for chai assertions
+      }
+    }
+  ]
 }
