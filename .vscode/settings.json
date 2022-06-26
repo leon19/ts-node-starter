@@ -16,11 +16,11 @@
   },
   "testExplorer.useNativeTesting": true,
   "testExplorer.addToEditorContextMenu": true,
-  "mochaExplorer.require": ["tests/entry.js"],
+  "mochaExplorer.require": [".mocha.entry.js"],
   "mochaExplorer.env": {
     "NODE_ENV": "test"
   },
-  "mochaExplorer.files": "tests/**/*.{test,spec}.ts",
+  "mochaExplorer.files": "src/**/*.{test,spec}.ts",
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",

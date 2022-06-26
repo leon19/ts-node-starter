@@ -10,11 +10,12 @@ Git hooks scripts are installed after running `npm install` the first time
 
 ### npm run build
 
-Compile typescript files from the `src` and `tests` folder without emitting the sources
+Compile typescript files from the `src` folder without emitting the sources
 
 ### npm run build:commonjs
 
-Compile typescript files from the `src` folder inside the `dist/commonjs` folder
+Compile typescript files from the `src` folder, excluding `*.test.ts` and `*.spec.ts` file, inside
+the `dist/commonjs` folder
 
 ### npm run clean
 
@@ -25,11 +26,7 @@ Remove the following directories/files
 
 ### npm test
 
-Run tests files inside the `tests` folder that matches the following patterns. Exit with code > 0 on
-error
-
-- **\*.test.ts**
-- **\*.spec.ts**
+Run `*.test.ts` and `*.spec.ts` files under the `src` folder
 
 ### npm run cover
 
