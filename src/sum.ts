@@ -1,5 +1,5 @@
 /**
- * Just an example function that sums two or more number.
+ * Just an example function that sums two or more numbers.
  *
  * @example ```
  * const result = sum(1 + 2); // 3

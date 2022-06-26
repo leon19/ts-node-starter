@@ -8,5 +8,6 @@
     "tsBuildInfoFile": ".tmp/.tsbuildinfo.build",
     "types": ["node"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts"]
 }
