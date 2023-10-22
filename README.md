@@ -8,14 +8,14 @@ source code before commit
 
 Git hooks scripts are installed after running `npm install` the first time
 
-### npm run build
+### npm run build:dev
 
 Compile typescript files from the `src` folder without emitting the sources
 
-### npm run build:commonjs
+### npm run build
 
 Compile typescript files from the `src` folder, excluding `*.test.ts` and `*.spec.ts` file, inside
-the `dist/commonjs` folder
+the `dist` folder
 
 ### npm run clean
 

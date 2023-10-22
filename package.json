@@ -2,10 +2,11 @@
   "name": "ts-node-starter",
   "version": "0.0.0-development",
   "description": "Start pack for TypeScript under NodeJS",
-  "main": "dist/commonjs/index.js",
-  "types": "dist/commonjs/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "author": "Lorens León <lorensleon@gmail.com>",
+  "type": "module",
   "files": [
     "src",
     "dist"
@@ -15,13 +16,13 @@
     "url": "https://github.com/leon19/ts-node-starter"
   },
   "scripts": {
-    "build": "tsc",
-    "build:commonjs": "tsc --project tsconfig.commonjs.json",
+    "build:dev": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf .tmp dist",
     "test": "mocha 'src/**/*.{test,spec}.ts'",
     "cover": "c8 npm test",
     "lint": "eslint --fix 'src/**/*.{js,ts}' && prettier --write '*.{md,json}'",
-    "prepublishOnly": "npm run clean && npm run build:commonjs",
+    "prepublishOnly": "npm run clean && npm run build",
     "prepare": "husky install || exit 0"
   },
   "dependencies": {

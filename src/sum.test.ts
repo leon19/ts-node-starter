@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum } from './sum';
+import { sum } from './sum.js';
 
 describe('sum()', () => {
   it('should sum two values', () => {

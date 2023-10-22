@@ -48,19 +48,13 @@
         "object": true
       }
     ],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true
-      }
-    ],
     "quote-props": ["error", "as-needed"],
 
     // Import order plugin
     "import/first": ["error"],
     "import/newline-after-import": ["error"],
     "import/no-extraneous-dependencies": ["error"],
+    "import/no-unresolved": "off", // not working with esm modules with extension
     "import/order": [
       "error",
       {
