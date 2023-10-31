@@ -20,8 +20,8 @@
   "mochaExplorer.env": {
     "NODE_ENV": "test"
   },
+  "mochaExplorer.nodeArgv": ["--loader=ts-node/esm", "--no-warnings"],
   "mochaExplorer.files": "src/**/*.{test,spec}.ts",
-  "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.run": "onSave",
   "prettier.enable": true,
