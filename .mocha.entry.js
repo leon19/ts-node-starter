@@ -1,3 +1,0 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'test';
-
-// require chai plugins or mocha specific files here...
