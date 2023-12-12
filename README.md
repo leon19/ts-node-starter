@@ -2,9 +2,8 @@
 
 ## Development
 
-The project use [husky](https://github.com/typicode/husky) and
-[lint-staged](https://github.com/okonet/lint-staged) for linting and fixing possible errors on
-source code before commit
+The project use [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) for linting and fixing
+possible errors on source code before commit
 
 Git hooks scripts are installed after running `npm install` the first time
 
@@ -14,8 +13,7 @@ Compile typescript files from the `src` folder without emitting the sources
 
 ### npm run build
 
-Compile typescript files from the `src` folder, excluding `*.test.ts` and `*.spec.ts` file, inside
-the `dist` folder
+Compile typescript files from the `src` folder, excluding `*.test.ts` and `*.spec.ts` file, inside the `dist` folder
 
 ### npm run clean
 
@@ -30,13 +28,12 @@ Run `*.test.ts` and `*.spec.ts` files under the `src` folder
 
 ### npm run cover
 
-The same as `npm test` and generates coverages reports in `.tmp/reports/coverage`. Exit with code >
-0 on error
+The same as `npm test` and generates coverages reports in `.tmp/reports/coverage`. Exit with code > 0 on error
 
 ### npm run lint
 
-Check eslint errors according to `.eslintrc` and `.pretterrc` applying fixes and run prettier on
-every typescript file
+- Format and lint `typescript` and `json` files according to `biome.json`.
+- Format `markdown` files according to `.pretterrc.json`.
 
 ### npm run release
 
