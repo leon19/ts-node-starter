@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.4.0/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -14,10 +14,10 @@
         "useShorthandAssign": "error"
       },
       "suspicious": {
-        "noConsoleLog": "error"
+        "noConsoleLog": "error",
+        "noImplicitAnyLet": "error"
       },
       "nursery": {
-        "noImplicitAnyLet": "error",
         "noUnusedImports": "error",
         "noUnusedPrivateClassMembers": "error",
         "useGroupedTypeImport": "error"
