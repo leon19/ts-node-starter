@@ -15,7 +15,8 @@
       },
       "suspicious": {
         "noConsoleLog": "error",
-        "noImplicitAnyLet": "error"
+        "noImplicitAnyLet": "error",
+        "noExplicitAny": "off"
       },
       "nursery": {
         "noUnusedImports": "error",
