@@ -11,7 +11,8 @@
       "style": {
         "useShorthandArrayType": "error",
         "useNamingConvention": "error",
-        "useShorthandAssign": "error"
+        "useShorthandAssign": "error",
+        "noNonNullAssertion": "off"
       },
       "suspicious": {
         "noConsoleLog": "error",
