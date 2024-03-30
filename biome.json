@@ -5,12 +5,10 @@
   },
   "linter": {
     "enabled": true,
-
     "rules": {
       "recommended": true,
       "style": {
         "useShorthandArrayType": "error",
-        "useNamingConvention": "error",
         "useShorthandAssign": "error",
         "noNonNullAssertion": "off",
         "useImportType": "error"
@@ -38,7 +36,8 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "arrowParentheses": "asNeeded"
+      "arrowParentheses": "asNeeded",
+      "trailingComma": "none"
     }
   }
 }
