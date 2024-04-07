@@ -36,8 +36,7 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "arrowParentheses": "asNeeded",
-      "trailingComma": "none"
+      "arrowParentheses": "asNeeded"
     }
   }
 }
