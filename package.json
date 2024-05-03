@@ -29,10 +29,10 @@
     "@types/node": "*"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.0",
-    "@commitlint/cli": "^19.2.2",
+    "@biomejs/biome": "1.7.2",
+    "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@types/chai": "^4.3.14",
+    "@types/chai": "^4.3.15",
     "@types/mocha": "^10.0.6",
     "c8": "^9.1.0",
     "chai": "^5.1.0",
