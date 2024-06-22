@@ -1,7 +1,7 @@
 {
   "include": ["src/**/*.ts"],
   "exclude": ["**/*.d.ts", "**/*.test.ts", "**/index.ts"],
-  "reporter": ["clover", "cobertura", "html", "json", "lcov", "text", "text-summary"],
+  "reporter": ["console-details", "v8"],
   "clean": true,
   "report-dir": ".tmp/reports/coverage",
   "all": true

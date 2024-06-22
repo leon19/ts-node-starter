@@ -17,13 +17,14 @@
     "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf .tmp dist",
     "test": "mocha 'src/**/*.test.ts'",
-    "cover": "c8 npm test",
+    "cover": "c8 --experimental-monocart npm test",
     "lint": "biome check --write --unsafe src && prettier --write '*.md'",
     "prepublishOnly": "npm run clean && npm run build",
     "prepare": "husky"
   },
   "dependencies": {
-    "@types/node": "*"
+    "@types/node": "*",
+    "monocart-coverage-reports": "^2.8.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
