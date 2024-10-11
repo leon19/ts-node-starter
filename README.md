@@ -7,35 +7,35 @@ possible errors on source code before commit
 
 Git hooks scripts are installed after running `npm install` the first time
 
-### npm run build:dev
+### node --run build:dev
 
 Compile typescript files from the `src` folder without emitting the sources
 
-### npm run build
+### node --run build
 
-Compile typescript files from the `src` folder, excluding `*.test.ts` and `*.spec.ts` file, inside the `dist` folder
+Compile typescript files from the `src` folder, excluding `*.test.ts` file, inside the `dist` folder
 
-### npm run clean
+### node --run clean
 
 Remove the following directories/files
 
 - **.tmp**
 - **dist**
 
-### npm test
+### node --run test
 
-Run `*.test.ts` and `*.spec.ts` files under the `src` folder
+Run `*.test.ts` files under the `src` folder
 
-### npm run cover
+### node --run cover
 
-The same as `npm test` and generates coverages reports in `.tmp/reports/coverage`. Exit with code > 0 on error
+The same as `node --run test` and generates coverages reports in `.tmp/reports/coverage`. Exit with code > 0 on error
 
-### npm run lint
+### node --run lint
 
 - Format and lint `typescript` and `json` files according to `biome.json`.
 - Format `markdown` files according to `.pretterrc.json`.
 
-### npm run release
+### node --run release
 
 - Bump `package.json` version accordingly to the commit messages
 - Generate changelog for the new version from the commit messages
