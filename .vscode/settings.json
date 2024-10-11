@@ -7,21 +7,12 @@
         "type": "node",
         "request": "launch",
         "args": ["${relativeFile}"],
-        "runtimeArgs": ["-r", "ts-node/register"],
+        "runtimeArgs": ["--loader", "ts-node/esm", "--no-warnings"],
         "sourceMaps": true,
-        "cwd": "${workspaceRoot}",
-        "protocol": "inspector"
+        "cwd": "${workspaceRoot}"
       }
     ]
   },
-  "testExplorer.useNativeTesting": true,
-  "testExplorer.addToEditorContextMenu": true,
-  "mochaExplorer.require": [".mocha.entry.js"],
-  "mochaExplorer.env": {
-    "NODE_ENV": "test"
-  },
-  "mochaExplorer.nodeArgv": ["--loader=ts-node/esm", "--no-warnings"],
-  "mochaExplorer.files": "src/**/*.{test,spec}.ts",
   "prettier.enable": true,
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
