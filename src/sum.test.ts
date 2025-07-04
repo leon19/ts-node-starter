@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 import { describe, it } from 'node:test';
-import { sum } from './sum.js';
+import { sum } from './sum.ts';
 
 describe('sum()', () => {
   it('should sum two values', () => {

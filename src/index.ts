@@ -1,1 +1,1 @@
-export { sum } from './sum.js';
+export { sum } from './sum.ts';
