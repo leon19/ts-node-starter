@@ -19,7 +19,7 @@
     "build:dev": "tsc",
     "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf .tmp dist",
-    "test": "node --env-file .test.env --test 'src/**/*.test.ts'",
+    "test": "node --env-file .env.test --test 'src/**/*.test.ts'",
     "cover": "c8 node --run test",
     "lint": "biome check --write --unsafe src && prettier --write '*.md'",
     "prepublishOnly": "node --run clean && node --run build",
