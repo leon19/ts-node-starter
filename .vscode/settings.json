@@ -7,7 +7,7 @@
         "type": "node",
         "request": "launch",
         "args": ["${relativeFile}"],
-        "runtimeArgs": ["--loader", "ts-node/esm", "--no-warnings"],
+        "runtimeArgs": ["--import", "@swc-node/register/esm-register"],
         "sourceMaps": true,
         "cwd": "${workspaceRoot}"
       }
