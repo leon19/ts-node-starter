@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "semi": true,
+  "trailingComma": "all",
+  "sortPackageJson": false,
+  "sortImports": {
+    "groups": ["builtin", "external", ["internal", "subpath"], ["parent", "sibling", "index"], "style", "unknown"],
+    "newlinesBetween": false
+  },
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "options": { "printWidth": 140, "proseWrap": "always" }
+    }
+  ],
+  "ignorePatterns": ["/dist/**", "/.tmp/**", "/tsconfig.json"]
+}

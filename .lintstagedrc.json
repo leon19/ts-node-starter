@@ -1,5 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/lintstagedrc.schema.json",
-  "src/**/*.{ts,json}": ["biome check --write --unsafe"],
-  "*.md": ["prettier --write"]
+  "src/**/*.ts": ["oxlint --fix --fix-suggestions", "oxfmt"],
+  "src/**/*.json": ["oxfmt"],
+  "*.md": ["oxfmt"]
 }

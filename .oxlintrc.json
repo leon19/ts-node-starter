@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "import"],
+  "categories": {
+    "correctness": "error"
+  },
+  "ignorePatterns": ["/dist/**", "/.tmp/**", "/node_modules/**"],
+  "rules": {
+    "no-unused-vars": "error",
+    "no-unused-private-class-members": "error",
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "ignorePackages": true,
+        "checkTypeImports": true,
+        "pattern": { "js": "never" }
+      }
+    ],
+    "import/no-default-export": "error",
+    "typescript/array-type": ["error", { "default": "array" }],
+    "unicorn/filename-case": ["error", { "case": "kebabCase" }],
+    "typescript/consistent-type-imports": "error",
+    "operator-assignment": "error",
+    "no-console": "error",
+    "typescript/no-explicit-any": "off"
+  }
+}

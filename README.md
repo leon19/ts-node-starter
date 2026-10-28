@@ -32,8 +32,12 @@ The same as `node --run test` and generates coverages reports in `.tmp/reports/c
 
 ### node --run lint
 
-- Format and lint `typescript` and `json` files according to `biome.json`.
-- Format `markdown` files according to `.pretterrc.json`.
+- Format and lint `typescript` files according to `.oxlintrc.json` and `.oxfmtrc.json`.
+- Format `json` and `markdown` files according to `.oxfmtrc.json`.
+
+### node --run lint:check
+
+- Check linting, formatting, and types without modifying files.
 
 ### node --run release
 

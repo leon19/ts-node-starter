@@ -21,7 +21,8 @@
     "clean": "rm -rf .tmp dist",
     "test": "node --env-file .env.test --test 'src/**/*.test.ts'",
     "cover": "c8 node --run test",
-    "lint": "biome check --write --unsafe src && prettier --write '*.md'",
+    "lint": "oxlint --fix --fix-suggestions src && oxfmt src && oxfmt '*.md'",
+    "lint:check": "oxlint src && oxfmt --check src && oxfmt --check '*.md' && tsc --noEmit",
     "prepublishOnly": "node --run clean && node --run build",
     "prepare": "husky"
   },
@@ -29,14 +30,14 @@
     "@types/node": "*"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
     "@swc-node/register": "^1.12.1",
     "c8": "^12.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
-    "prettier": "^3.9.10",
+    "oxfmt": "0.75.0",
+    "oxlint": "^1.90.0",
     "semantic-release": "^25.0.9",
     "typescript": "~6.0.3"
   },
