@@ -29,15 +29,15 @@
     "@types/node": "*"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
+    "@biomejs/biome": "2.6.8",
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
     "@swc-node/register": "^1.12.1",
     "c8": "^12.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.6.0",
-    "prettier": "^3.9.10",
-    "semantic-release": "^25.0.9",
+    "lint-staged": "^17.6.2",
+    "prettier": "^3.10.1",
+    "semantic-release": "^26.0.1",
     "typescript": "~6.0.3"
   },
   "release": {
